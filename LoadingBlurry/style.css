@@ -3,17 +3,24 @@
   padding: 0px;
   box-sizing: border-box;
 }
-body {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.bg {
   background-image: url(../assets/images/chhath.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  filter: blur(20px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-span {
+.loading-text {
   font-size: 3rem;
-  color: white;
+  color: rgb(253, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
 }
