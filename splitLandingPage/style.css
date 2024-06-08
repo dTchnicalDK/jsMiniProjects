@@ -3,20 +3,100 @@
   padding: 0px;
   box-sizing: border-box;
 }
-body {
+:root {
+  --background-color-left: rgba(138, 64, 4, 0.7);
+  --background-color-right: rgba(4, 56, 2, 0.7);
+  --button-hover-color-left: orange;
+  --button-hover-color-right: green;
+}
+
+.container {
   background-color: #212121;
   color: white;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
-.container {
-  width: 70vw;
-  height: 40vh;
-  background-color: steelblue;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 2px 2px 5px black;
+.split {
+  width: 50%;
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+.split.left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: url(./images/modi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.left::before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: var(--background-color-left);
+  height: 100%;
+  width: 100%;
+}
+.split.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: url(./images/rahul.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.split.right::before {
+  content: " ";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: var(--background-color-right);
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  position: relative;
+  left: 50%;
+  top: 20%;
+  font-size: 4rem;
+  text-wrap: nowrap;
+  transform: translateX(-25%);
+}
+button {
+  font-size: 1.5rem;
+  max-width: 50%;
+  min-width: 40%;
+  text-wrap: nowrap;
+  border: 2px solid white;
+  position: absolute;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-25%);
+  cursor: pointer;
+}
+button.left:hover {
+  font-size: 1.4rem;
+  background-color: var(--button-hover-color-left);
+}
+button.right:hover {
+  font-size: 1.4rem;
+  background-color: var(--button-hover-color-right);
+}
+.hover-left .left {
+  width: 75%;
+}
+.hover-left .right {
+  width: 25%;
+}
+.hover-right .left {
+  width: 25%;
+}
+.hover-right .right {
+  width: 75%;
 }
