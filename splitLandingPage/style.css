@@ -63,6 +63,7 @@ h1 {
   font-size: 4rem;
   text-wrap: nowrap;
   transform: translateX(-25%);
+  text-shadow: 2px 2px 2px darkgray;
 }
 button {
   font-size: 1.5rem;
@@ -79,6 +80,7 @@ button {
   left: 50%;
   transform: translateX(-25%);
   cursor: pointer;
+  box-shadow: 2px 2px 2px darkgrey;
 }
 button.left:hover {
   font-size: 1.4rem;
