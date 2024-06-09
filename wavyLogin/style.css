@@ -45,13 +45,17 @@ form {
 .form-control input:focus + label {
   color: lightblue;
   transform: translateY(-50px);
-  transition: all 80ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: transform 50ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  /* transition: all 80ms ease-in-out; */
 }
+
 label {
   position: absolute;
   left: 30px;
   transform: translateY(-30px);
+  /* transition: all 80ms ease; */
 }
+
 form button {
   display: inline-block;
   cursor: pointer;
@@ -61,6 +65,7 @@ form button {
   margin-top: 15px;
   border-radius: 5px;
 }
+
 form span {
   display: inline-block;
   margin-top: 2%;
