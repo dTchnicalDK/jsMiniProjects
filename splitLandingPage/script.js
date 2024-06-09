@@ -23,9 +23,11 @@ right.addEventListener("mouseout", () =>
 
 butttonLeft.addEventListener("click", () => {
   VotedTo.innerText = "Bjp Thanks for ur vote";
-  butttonRight.disabled = true;
+  //   butttonRight.disabled = true;
+  butttonRight.remove();
 });
 butttonRight.addEventListener("click", () => {
   VotedToRight.innerText = "congress thanks for ur vote";
-  butttonLeft.disabled = true;
+  //   butttonLeft.disabled = true;
+  butttonLeft.remove();
 });

@@ -71,6 +71,7 @@ h3 {
   left: 50%;
   top: 20%;
   font-size: 2rem;
+  color: rgb(243, 247, 10);
   text-wrap: nowrap;
   transform: translateX(-25%);
   text-shadow: 2px 2px 2px darkgray;
