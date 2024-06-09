@@ -7,7 +7,7 @@ inputLables.forEach(
       .split("")
       .map(
         (letter, indx) =>
-          `<span style = "transition-delay: ${indx * 80}ms">${letter}</span>`
+          `<span style = "transition-delay: ${indx * 30}ms">${letter}</span>`
       )
       .join(""))
   //   console.log(span);
