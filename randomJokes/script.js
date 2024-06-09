@@ -14,7 +14,7 @@ function retrieveJoke() {
         return res.json();
       })
       .then((data) => {
-        joke.innerHTML = data.joke;
+        joke.innerHTML = `" ${data.joke} "`;
       });
   } catch (error) {
     console.log(`error is ${error}`);
