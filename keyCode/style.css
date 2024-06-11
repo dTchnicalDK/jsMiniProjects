@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #212121;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  height: 30%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10%; */
+}
+.keyContainer {
+  text-align: center;
+  margin: 5px;
+}
+.key {
+  width: 160px;
+  background-color: azure;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  display: block;
+}
+.startingText {
+  width: 300px;
+  background-color: azure;
+  color: black;
+  margin: auto;
+  font-size: 1.5rem;
+  padding: 1%;
+  border-radius: 5px;
+}
