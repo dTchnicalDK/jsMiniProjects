@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -7,14 +9,19 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #212121;
+}
+.faq-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.faq-container h1 {
+  color: white;
+  padding: 10px;
+}
 .faq {
-  max-width: 90%;
-
+  width: 80%;
   border: 2px solid black;
   border-radius: 5px;
   background-color: rgb(192, 200, 206);
@@ -23,6 +30,7 @@ body {
   text-align: center;
   overflow: hidden;
   margin: 5px auto;
+  transition: all 0.5s ease;
 }
 .faq::before,
 .faq::after {
@@ -44,6 +52,9 @@ body {
 .question {
   padding: 15px;
   font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 .answere {
   margin-top: 20px;
@@ -55,12 +66,16 @@ body {
 }
 .faq.active .answere {
   display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .faq.active {
   background-color: white;
 }
 .faq-icons {
   position: absolute;
+  z-index: 5;
   right: 25px;
   top: 25px;
   width: 30px;
@@ -69,7 +84,7 @@ body {
   text-align: center;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid grey;
+  border: 2px solid black;
 }
 .faq .fa-xmark {
   display: none;
@@ -79,4 +94,7 @@ body {
 }
 .faq.active .fa-xmark {
   display: block;
+}
+small {
+  color: white;
 }
