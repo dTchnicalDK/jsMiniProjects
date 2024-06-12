@@ -4,11 +4,79 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #212121;
-  color: white;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  background-color: #212121;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.faq {
+  max-width: 90%;
+
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(192, 200, 206);
+  box-shadow: 2px 2px 2px black;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin: 5px auto;
+}
+.faq::before,
+.faq::after {
+  font: var(--fa-font-regular);
+  content: "\f4ad";
+  font-size: 4rem;
+  color: rgba(0, 128, 0, 0.466);
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  z-index: 0;
+}
+.faq::before {
+  color: rgba(255, 68, 0, 0.438);
+  left: 60px;
+  top: 10px;
+  transform: rotate(-180deg);
+}
+.question {
+  padding: 15px;
+  font-size: 1.7rem;
+}
+.answere {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(214, 211, 211);
+  display: none;
+  box-shadow: inset 2px 2px 2px;
+}
+.faq.active .answere {
+  display: block;
+}
+.faq.active {
+  background-color: white;
+}
+.faq-icons {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid grey;
+}
+.faq .fa-xmark {
+  display: none;
+}
+.faq.active .fa-caret-down {
+  display: none;
+}
+.faq.active .fa-xmark {
+  display: block;
 }
