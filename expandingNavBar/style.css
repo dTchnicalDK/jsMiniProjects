@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #212121;
+  /* background-color: #212121; */
+  background-image: linear-gradient(red, blue);
   color: white;
   height: 100vh;
   width: 100vw;
@@ -14,14 +15,15 @@ body {
 }
 .nav-container {
   width: 500px;
-  background-color: white;
+  background-color: rgb(243, 235, 235);
   color: black;
   padding: 5px;
   text-align: center;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   position: relative;
+  box-shadow: 2px 2px 3px black;
+  transition: width 1s linear;
 }
 .nav-container ul {
   width: 80%;
@@ -33,47 +35,65 @@ body {
 }
 .nav-container ul li a {
   color: black;
+  transition: color 1s linear;
   text-decoration: none;
   font-size: 1.2rem;
+  display: block;
 }
 
 .line {
-  width: 6%;
+  width: 30px;
   height: 2px;
   background-color: black;
   position: absolute;
   right: 10px;
   top: 50%;
+  transition: all 1s linear;
+}
+div#lines {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  /* background-color: green; */
 }
 .line1 {
-  transform: rotate(-135deg);
+  transform: rotate(45deg);
 }
 .line2 {
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
 }
 
 /* css fo inaactibe condition------------------------------------- */
 .nav-container.inactive {
   border-radius: 3px;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-container.inactive ul a {
+  color: rgba(0, 0, 0, 0);
+  transform: rotate3d(0, 1, 0, 360deg);
 }
 .nav-container.inactive ul {
   display: none;
-  transition-delay: 1s;
 }
-.nav-container.inactive ul li {
-  transform: rotate3d(0, 1, 0, 360deg);
-  transition: transform 1s ease;
+.nav-container.inactive #lines {
+  width: 40px;
+  height: 40px;
 }
 .nav-container.inactive .line {
-  margin: 0px;
-  top: 40%;
-  left: 19px;
   height: 2px;
   width: 30px;
+  top: 40%;
   transform: rotateX(0deg);
 }
 .nav-container.inactive .line1 {
-  transform: translateY(10px);
+  transform: rotate(-360deg);
+}
+.nav-container.inactive .line2 {
+  transform: rotate(360deg);
+  top: 55%;
 }
