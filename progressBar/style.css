@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fcd260;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 50px;
+  width: 60%;
+  border: 1px solid black;
+  /* background-color: rgb(68, 69, 68); */
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px black;
+}
