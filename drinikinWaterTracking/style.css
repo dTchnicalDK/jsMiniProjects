@@ -1,0 +1,82 @@
+:root {
+  --filled-glass-color: rgb(0, 204, 255);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #212121;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
+.glasses-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  color: darkblue;
+}
+.small-glasses {
+  display: flex;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2%;
+  cursor: pointer;
+}
+.small-glasses .glass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass {
+  height: 150px;
+  width: 80px;
+  background-color: white;
+  border: 2px solid skyblue;
+  border-radius: 0px 0px 20px 20px;
+  margin: 5px;
+}
+.glass.filled {
+  background-color: var(--filled-glass-color);
+  color: white;
+}
+
+.large-glass {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 250px;
+  width: 150px;
+}
+.large-glass span {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.large-glass .remaining {
+  flex: 1;
+}
+.remaining span {
+  font-size: 1.5rem;
+}
+.large-glass .achieved {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 0%;
+  background-color: var(--filled-glass-color);
+  color: white;
+  transition: height 1s ease;
+}
