@@ -4,122 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
     <title>movieReviewApp</title>
   </head>
   <body>
     <div class="container">
       <div class="nav">
-        <h1>D_MOVIE</h1>
-        <input type="text" placeholder="search..." />
-        <button onclick="fetchData()">search</button>
-      </div>
-      <div class="main">
-        <div class="movie">
-          <img
-            src="../assets/images/movieShoot.jpg"
-            alt="movie poster"
-            id="image"
-          />
-          <div class="title-n-rating">
-            <h3 class="title">movie title</h3>
-            <span id="rating">9.8</span>
-          </div>
-          <div class="movie-info">
-            <h3>storyLine</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur, commodi explicabo. Praesentium quidem libero deleniti
-              labore, sapiente natus nesciunt iusto at saepe, ut culpa incidunt
-              esse illo maiores quae odio? Molestias, quibusdam. Eius,
-              repudiandae impedit doloremque necessitatibus ipsum neque labore?
-            </p>
-          </div>
+        <div class="logo">
+          <div>D</div>
+          <h1>CREATOR</h1>
         </div>
-        <div class="movie">
-          <img
-            src="../assets/images/movieShoot.jpg"
-            alt="movie poster"
-            id="image"
-          />
-          <div class="title-n-rating">
-            <h3 class="title">movie title</h3>
-            <span id="rating">9.8</span>
-          </div>
-          <div class="movie-info">
-            <h3>storyLine</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur, commodi explicabo. Praesentium quidem libero deleniti
-              labore, sapiente natus nesciunt iusto at saepe, ut culpa incidunt
-              esse illo maiores quae odio? Molestias, quibusdam. Eius,
-              repudiandae impedit doloremque necessitatibus ipsum neque labore?
-            </p>
-          </div>
-        </div>
-
-        <div class="movie">
-          <img
-            src="../assets/images/movieShoot.jpg"
-            alt="movie poster"
-            id="image"
-          />
-
-          <div class="movie-info">
-            <h3 class="title">movie title</h3>
-            <span>9.8</span>
-            <h3>storyLine</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur, commodi explicabo. Praesentium quidem libero deleniti
-              labore, sapiente natus nesciunt iusto at saepe, ut culpa incidunt
-              esse illo maiores quae odio? Molestias, quibusdam. Eius,
-              repudiandae impedit doloremque necessitatibus ipsum neque labore?
-            </p>
-          </div>
-        </div>
-
-        <div class="movie">
-          <img
-            src="../assets/images/movieShoot.jpg"
-            alt="movie poster"
-            id="image"
-          />
-
-          <div class="movie-info">
-            <h3 class="title">movie title</h3>
-            <span>9.8</span>
-            <h3>storyLine</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur, commodi explicabo. Praesentium quidem libero deleniti
-              labore, sapiente natus nesciunt iusto at saepe, ut culpa incidunt
-              esse illo maiores quae odio? Molestias, quibusdam. Eius,
-              repudiandae impedit doloremque necessitatibus ipsum neque labore?
-            </p>
-          </div>
-        </div>
-
-        <div class="movie">
-          <img
-            src="../assets/images/movieShoot.jpg"
-            alt="movie poster"
-            id="image"
-          />
-
-          <div class="movie-info">
-            <h3 class="title">movie title</h3>
-            <span>9.8</span>
-            <h3>storyLine</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consectetur, commodi explicabo. Praesentium quidem libero deleniti
-              labore, sapiente natus nesciunt iusto at saepe, ut culpa incidunt
-              esse illo maiores quae odio? Molestias, quibusdam. Eius,
-              repudiandae impedit doloremque necessitatibus ipsum neque labore?
-            </p>
-          </div>
+        <div class="search-container">
+          <input type="text" placeholder="search..." id="search-field" />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <!-- <button id="find">FindNow</button> -->
         </div>
       </div>
+      <div class="main"></div>
     </div>
 
     <script src="script.js"></script>
