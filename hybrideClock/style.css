@@ -14,8 +14,8 @@ body {
   align-items: center;
 }
 .container {
-  width: 90vw;
-  height: 70vh;
+  width: 60vw;
+  height: 80vh;
   background-color: steelblue;
   text-align: center;
   border-radius: 15px;
@@ -32,7 +32,7 @@ body {
   border-radius: 50%;
   border: 5px solid white;
   box-shadow: 2px 3px 5px gray;
-  background-image: radial-gradient(yellow, green, darkgreen);
+  /* background-image: radial-gradient(yellow, green, darkgreen); */
 }
 .needle {
   height: 80px;
@@ -91,4 +91,14 @@ body {
 .digi-minute {
   color: blue;
   text-shadow: 2px 2px 2px rgb(77, 104, 2);
+}
+.calendar-container .date {
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(red, blue);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
 }

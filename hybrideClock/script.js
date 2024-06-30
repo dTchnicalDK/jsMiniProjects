@@ -2,6 +2,7 @@ const hourNeedle = document.querySelector(".hour");
 const minuteNeedle = document.querySelector(".minute");
 const secondNeedle = document.querySelector(".second");
 let digitalClock = document.querySelectorAll(".dclock");
+let calenderElements = document.querySelectorAll(".calendar");
 
 setInterval(setTime, 1000);
 
@@ -51,4 +52,38 @@ function setDigitalClock(timeHour, timeMinute, timeSecond) {
   digitalClock[1].innerHTML = `: ${addZero(timeMinute)}${timeMinute}`;
   digitalClock[2].innerHTML = `: ${addZero(timeSecond)}${timeSecond}`;
   digitalClock[3].innerHTML = `: ${amPm}`;
+}
+
+// date elements settlement
+let dateElement = new Date();
+const days = [
+  "Sundary",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+upateDate();
+
+function upateDate() {
+  calenderElements[0].innerHTML = dateElement.getDate();
+  calenderElements[1].innerHTML = months[dateElement.getMonth()];
+  calenderElements[2].innerHTML = days[dateElement.getDay()];
+  calenderElements[3].innerHTML = dateElement.getFullYear();
 }
