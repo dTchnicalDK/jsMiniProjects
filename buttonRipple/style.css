@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #05308e;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-div {
+  background-color: rgb(158, 3, 176);
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px white;
+  cursor: pointer;
+  position: relative;
+}
