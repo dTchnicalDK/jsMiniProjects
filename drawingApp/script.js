@@ -1,22 +1,25 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
-
-let color = "black";
-let size = 5;
+const canvasHight = window.innerHeight - (window.innerHeight * 20) / 100;
+const canvasWidth = window.innerWidth - (window.innerWidth * 10) / 100;
+console.log(canvasWidth);
+canvas.height = canvasHight;
+canvas.width = canvasWidth;
+let color = "";
+let size = 2;
 let x1, y1, x2, y2;
 let isMouseDown = false;
 
+//different mouse condition functions;
 canvas.addEventListener("mousedown", (e) => {
   isMouseDown = true;
   x1 = e.offsetX;
   y1 = e.offsetY;
-  //   console.log(x1, y1, isMouseDown);
 });
 canvas.addEventListener("mouseup", () => {
   isMouseDown = false;
   x1 = undefined;
   y1 = undefined;
-  //   console.log("mouse up now");
 });
 canvas.addEventListener("mousemove", (e) => {
   if (isMouseDown) {
@@ -27,9 +30,7 @@ canvas.addEventListener("mousemove", (e) => {
     drawLine(x1, y1, x2, y2);
     x1 = x2;
     y1 = y2;
-    // console.log(x1, y1, x2, y2);
   }
-  console.log("mouse moving");
 });
 function drawCircle(x1, y1) {
   ctx.moveTo(x1, y1);
@@ -45,4 +46,27 @@ function drawLine(x1, y1, x2, y2) {
   ctx.strokeStyle = color;
   ctx.lineWidth = size * 2;
   ctx.stroke();
+}
+
+function selectColor(e) {
+  color = e.target.value;
+}
+
+function increase() {
+  let strokeSize = document.getElementById("strokeSize");
+  size = size + 1;
+  strokeSize.innerHTML = size;
+}
+function decrease() {
+  let strokeSize = document.getElementById("strokeSize");
+  size = size - 1;
+  if (size < 1) {
+    size = 1;
+  }
+  strokeSize.innerHTML = size;
+}
+
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
 }
