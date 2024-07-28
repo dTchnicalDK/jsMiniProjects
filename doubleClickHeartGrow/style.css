@@ -10,3 +10,40 @@ body {
   height: 100vh;
   width: 100vw;
 }
+h3,
+h5 {
+  text-align: center;
+}
+h5 {
+  margin-bottom: 20px;
+}
+.likes {
+  background-color: yellow;
+  color: red;
+  border-radius: 50%;
+  padding: 5px;
+}
+.pic-container {
+  width: 50%;
+  height: 70%;
+  position: relative;
+  background-image: url("../assets/images/ai.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  box-shadow: 0px 0px 3px lightsalmon, 0px 0px 5px lightgreen;
+}
+.pic-container .fa-heart {
+  color: red;
+  position: absolute;
+  animation: grow-heart 0.7s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow-heart {
+  to {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+}
