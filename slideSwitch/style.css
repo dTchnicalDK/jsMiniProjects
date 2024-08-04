@@ -1,0 +1,93 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: #212121; */
+  /* color: white; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switches {
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+}
+.switch {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.select:checked + .label {
+  box-shadow: inset 2px 2px 2px;
+  background-color: rgb(154, 32, 2);
+}
+.select:checked + .label .ball {
+  background-color: bisque;
+  box-shadow: 2px 2px 2px;
+  animation: slide-on 0.5s linear forwards;
+}
+
+.switches .label {
+  background-color: grey;
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 25px;
+}
+.ball {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: white;
+  top: 3px;
+  left: 17px;
+  animation: slide-off 0.5s linear forwards;
+}
+/* .select:checked .label + .ball {
+  background-color: red;
+  animation: slide-on 0.5s linear forwards;
+} */
+.switch span {
+  margin-left: 20px;
+}
+
+.select {
+  visibility: hidden;
+}
+
+@keyframes slide-on {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(30px) scale(1.2);
+  }
+  100% {
+    transform: translateX(57px) scale(1);
+  }
+}
+@keyframes slide-off {
+  0% {
+    transform: translateX(57px) scale(1);
+  }
+  50% {
+    transform: translateX(30px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
