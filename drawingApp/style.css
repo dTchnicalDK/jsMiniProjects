@@ -18,6 +18,7 @@ canvas {
   border: 5px solid rgb(250, 72, 7);
   background-color: whitesmoke;
   cursor: crosshair;
+  touch-action: none;
 }
 .toolbox {
   width: 400px;

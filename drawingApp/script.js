@@ -8,21 +8,23 @@ canvas.width = canvasWidth;
 let color = "";
 let size = 2;
 let x1, y1, x2, y2;
-let isMouseDown = false;
+let isPointerdown = false;
 
 //different mouse condition functions;
-canvas.addEventListener("mousedown", (e) => {
-  isMouseDown = true;
+canvas.addEventListener("pointerdown", (e) => {
+  isPointerdown = true;
+  // e.preventDefault();
   x1 = e.offsetX;
   y1 = e.offsetY;
 });
-canvas.addEventListener("mouseup", () => {
-  isMouseDown = false;
+canvas.addEventListener("pointerup", () => {
+  isPointerdown = false;
   x1 = undefined;
   y1 = undefined;
 });
-canvas.addEventListener("mousemove", (e) => {
-  if (isMouseDown) {
+canvas.addEventListener("pointermove", (e) => {
+  // e.preventDefault();
+  if (isPointerdown) {
     x2 = e.offsetX;
     y2 = e.offsetY;
 
@@ -31,6 +33,9 @@ canvas.addEventListener("mousemove", (e) => {
     x1 = x2;
     y1 = y2;
   }
+});
+canvas.addEventListener("pointercancel", () => {
+  console.log("pointerdown cancelled");
 });
 function drawCircle(x1, y1) {
   ctx.moveTo(x1, y1);

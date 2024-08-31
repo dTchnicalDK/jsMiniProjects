@@ -37,23 +37,15 @@ body {
 .notifications h3.error {
   color: red;
 }
-.inputs {
-  width: 90vw;
-  position: relative;
-  border: 2px solid black;
-}
-input {
+.btn {
   font-size: 1.5rem;
-  padding: 5px;
-  width: 60%;
-  border-radius: 10px;
-  position: absolute;
-  right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
-input:last-child {
-  top: 50px;
+.btn:hover {
+  font-weight: bold;
 }
-label {
-  font-size: 1.5rem;
-  display: inline-block;
+.btn:active {
+  transform: scale(0.9);
 }
